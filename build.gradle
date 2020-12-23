@@ -1,0 +1,23 @@
+plugins {
+    id 'maven-publish'
+    id 'java'
+}
+
+group 'com.aye10032'
+version '1.0-beta'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+publishing {
+    publications {
+        myPublish(MavenPublication){
+            from components.java
+        }
+    }
+}
