@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.aye10032'
-version '1.0-beta'
+version '0.1.0'
 
 repositories {
     mavenCentral()
@@ -24,9 +24,19 @@ tasks.withType(JavaCompile) {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/aye10032/biliutil")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GIT_USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("GIT_TOKEN")
+            }
+        }
+    }
     publications {
-        myPublish(MavenPublication){
-            from components.java
+        gpr(MavenPublication) {
+            from(components.java)
         }
     }
 }

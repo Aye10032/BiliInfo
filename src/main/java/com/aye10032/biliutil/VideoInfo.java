@@ -2,7 +2,10 @@ package com.aye10032.biliutil;
 
 import com.aye10032.biliutil.data.URL;
 import com.aye10032.biliutil.util.Util;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -45,10 +48,26 @@ public class VideoInfo {
                 .build();
         try {
             Response response = client.newCall(request).execute();
-            System.out.println(Objects.requireNonNull(response.body()).string());
-        } catch (IOException e) {
+            String body = "";
+            if (response.body() != null) {
+                body = new String(response.body().bytes());
+            }
+
+            JsonElement element = JsonParser.parseString(body);
+
+            if (element.isJsonObject()){
+                this.body_json = element.getAsJsonObject();
+            }
+
+        } catch (IOException | JsonSyntaxException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * @return 返回整个JSON对象
+     */
+    public JsonObject getBody_json() {
+        return body_json;
+    }
 }
