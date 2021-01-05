@@ -1,6 +1,7 @@
 package com.aye10032.biliutil;
 
 import com.aye10032.biliutil.data.URL;
+import com.aye10032.biliutil.data.videoinfo.VideoData;
 import com.aye10032.biliutil.util.Util;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -11,7 +12,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.Objects;
 
 /**
  * @program: biliutil
@@ -23,6 +23,11 @@ public class VideoInfo {
 
     private final StringBuilder url;
     private JsonObject body_json;
+
+    private int code;
+    private String message;
+    private int ttl;
+    private VideoData videoData;
 
     public VideoInfo(String id){
         url = new StringBuilder();
@@ -57,9 +62,13 @@ public class VideoInfo {
 
             if (element.isJsonObject()){
                 this.body_json = element.getAsJsonObject();
+                this.code = body_json.get("code").getAsInt();
+                this.message = body_json.get("message").getAsString();
+                this.ttl = body_json.get("ttl").getAsInt();
+                this.videoData = new VideoData(body_json.get("data").getAsJsonObject());
             }
 
-        } catch (IOException | JsonSyntaxException e) {
+        } catch (IOException | JsonSyntaxException | IllegalStateException | ClassCastException e) {
             e.printStackTrace();
         }
     }
@@ -69,5 +78,32 @@ public class VideoInfo {
      */
     public JsonObject getBody_json() {
         return body_json;
+    }
+
+    /**
+     * @return 视频状态
+     * -0:成功
+     * -400：请求错误
+     * -403：权限不足
+     * -404：无视频
+     * 62002：稿件不可见
+     */
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public int getTtl() {
+        return ttl;
+    }
+
+    /**
+     * @return 返回视频信息类
+     */
+    public VideoData getVideoData(){
+        return videoData;
     }
 }
