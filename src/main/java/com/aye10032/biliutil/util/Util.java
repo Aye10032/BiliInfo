@@ -1,5 +1,7 @@
 package com.aye10032.biliutil.util;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,6 +21,12 @@ public class Util {
         Pattern pattern   =   Pattern.compile("(?i)[a-z]");
         Matcher matcher   =   pattern.matcher(id);
         return matcher.find();
+    }
+
+    public static Date long2date(long timestamp){
+        Date date = new Date(TimeUnit.SECONDS.toMillis(timestamp));
+//        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        return date;
     }
 
 }
