@@ -26,26 +26,44 @@ public class SubtitleAuthor {
 
     }
 
+    /**
+     * @return 字幕上传者UID
+     */
     public int getMid() {
         return mid;
     }
 
+    /**
+     * @return 字幕上传者昵称
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return 字幕上传者性别
+     */
     public String getSex() {
         return sex;
     }
 
+    /**
+     * @return 字幕上传者头像url
+     */
     public String getFace() {
         return face;
     }
 
+    /**
+     * @return 字幕上传者头像image对象
+     */
     public Image getFace_Image() {
         return ImgUtils.getImage(getFace());
     }
 
+    /**
+     * @return 字幕上传者签名
+     */
     public String getSign() {
         return sign;
     }
