@@ -20,8 +20,8 @@ public class VideoStat {
     private final int his_rank;
     private final int like;
     private final int dislike;
-    private final int evaluation;
-    private final int argue_msg;
+    private final String evaluation;
+    private final String argue_msg;
 
     public VideoStat(JsonObject stat) {
         this.aid = stat.get("aid").getAsLong();
@@ -35,8 +35,8 @@ public class VideoStat {
         this.his_rank = stat.get("his_rank").getAsInt();
         this.like = stat.get("like").getAsInt();
         this.dislike = stat.get("dislike").getAsInt();
-        this.evaluation = stat.get("evaluation").getAsInt();
-        this.argue_msg = stat.get("argue_msg").getAsInt();
+        this.evaluation = stat.get("evaluation").getAsString();
+        this.argue_msg = stat.get("argue_msg").getAsString();
     }
 
     /**
@@ -119,11 +119,11 @@ public class VideoStat {
     /**
      * @return 视频评分
      */
-    public int getEvaluation() {
+    public String getEvaluation() {
         return evaluation;
     }
 
-    public int getArgue_msg() {
+    public String getArgue_msg() {
         return argue_msg;
     }
 }
