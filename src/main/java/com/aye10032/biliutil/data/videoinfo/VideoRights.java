@@ -25,7 +25,7 @@ public class VideoRights {
     private final int is_stein_gate;
 
     public VideoRights(JsonObject rights) {
-        this.bp = rights.get("pb").getAsInt();
+        this.bp = rights.get("bp").getAsInt();
         this.elec = rights.get("elec").getAsInt();
         this.download = rights.get("download").getAsInt();
         this.movie = rights.get("movie").getAsInt();
