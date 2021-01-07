@@ -1,14 +1,12 @@
 package com.aye10032.biliutil.data.videoinfo;
 
+import com.aye10032.biliutil.data.videoinfo.staff.VideoStaff;
 import com.aye10032.biliutil.util.ImgUtils;
 import com.aye10032.biliutil.util.Util;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -59,6 +57,9 @@ public class VideoData {
 
     @SerializedName("subtitle")
     private VideoSubtitle videoSubtitle;
+
+    @SerializedName("staff")
+    private VideoStaff[] videoStaff;
 
     public VideoData(JsonObject body_json) {
 
@@ -256,5 +257,19 @@ public class VideoData {
      */
     public List<VideoPage> getVideoPages() {
         return videoPages;
+    }
+
+    /**
+     * @return 外挂字幕信息
+     */
+    public VideoSubtitle getVideoSubtitle() {
+        return videoSubtitle;
+    }
+
+    /**
+     * @return 合作创作者列表
+     */
+    public VideoStaff[] getVideoStaff() {
+        return videoStaff;
     }
 }
