@@ -3,10 +3,7 @@ package com.aye10032.biliutil;
 import com.aye10032.biliutil.data.URL;
 import com.aye10032.biliutil.data.videoinfo.VideoData;
 import com.aye10032.biliutil.util.Util;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -44,6 +41,8 @@ public class VideoInfo {
     }
 
     private void init(String url){
+        Gson gson = new Gson();
+
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
 
@@ -65,7 +64,8 @@ public class VideoInfo {
                 this.code = body_json.get("code").getAsInt();
                 this.message = body_json.get("message").getAsString();
                 this.ttl = body_json.get("ttl").getAsInt();
-                this.videoData = new VideoData(body_json.get("data").getAsJsonObject());
+
+                this.videoData = gson.fromJson(body_json.getAsJsonObject("data"), VideoData.class);
             }
 
         } catch (IOException | JsonSyntaxException | IllegalStateException | ClassCastException e) {

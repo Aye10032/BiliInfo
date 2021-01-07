@@ -9,36 +9,23 @@ import com.google.gson.JsonObject;
  * @create: 2021-01-05 17:31
  **/
 public class VideoRights {
-    private final int bp;
-    private final int elec;
-    private final int download;
-    private final int movie;
-    private final int pay;
-    private final int hd5;
-    private final int no_reprint;
-    private final int autoplay;
-    private final int ugc_pay;
-    private final int is_cooperation;
-    private final int ugc_pay_preview;
-    private final int no_background;
-    private final int clean_mode;
-    private final int is_stein_gate;
+    private int bp;
+    private int elec;
+    private int download;
+    private int movie;
+    private int pay;
+    private int hd5;
+    private int no_reprint;
+    private int autoplay;
+    private int ugc_pay;
+    private int is_cooperation;
+    private int ugc_pay_preview;
+    private int no_background;
+    private int clean_mode;
+    private int is_stein_gate;
 
     public VideoRights(JsonObject rights) {
-        this.bp = rights.get("bp").getAsInt();
-        this.elec = rights.get("elec").getAsInt();
-        this.download = rights.get("download").getAsInt();
-        this.movie = rights.get("movie").getAsInt();
-        this.pay = rights.get("pay").getAsInt();
-        this.hd5 = rights.get("hd5").getAsInt();
-        this.no_reprint = rights.get("no_reprint").getAsInt();
-        this.autoplay = rights.get("autoplay").getAsInt();
-        this.ugc_pay = rights.get("ugc_pay").getAsInt();
-        this.is_cooperation = rights.get("is_cooperation").getAsInt();
-        this.ugc_pay_preview = rights.get("ugc_pay_preview").getAsInt();
-        this.no_background = rights.get("no_background").getAsInt();
-        this.clean_mode = rights.get("clean_mode").getAsInt();
-        this.is_stein_gate = rights.get("is_stein_gate").getAsInt();
+
     }
 
     public int getBp() {

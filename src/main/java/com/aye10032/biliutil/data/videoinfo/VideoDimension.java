@@ -9,14 +9,12 @@ import com.google.gson.JsonObject;
  * @create: 2021-01-07 12:47
  **/
 public class VideoDimension {
-    private final int width;
-    private final int height;
-    private final int rotate;
+    private int width;
+    private int height;
+    private int rotate;
 
     public VideoDimension(JsonObject dimension) {
-        this.width = dimension.get("width").getAsInt();
-        this.height = dimension.get("height").getAsInt();
-        this.rotate = dimension.get("rotate").getAsInt();
+
     }
 
     public int getWidth() {

@@ -14,7 +14,7 @@ public class test {
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         System.out.println(ft.format(videoInfo.getVideoData().getPub_date()));
         System.out.println(videoInfo.getVideoData().getDesc());
-        System.out.println(videoInfo.getVideoData().getVideoPages().getPartNum());
+        System.out.println(videoInfo.getVideoData().getVideoPages().get(0).getDimension().getHeight());
     }
 
 }

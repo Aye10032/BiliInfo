@@ -2,6 +2,7 @@ package com.aye10032.biliutil.data.videoinfo;
 
 import com.aye10032.biliutil.util.ImgUtils;
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.SerializedName;
 
 import java.awt.*;
 
@@ -12,14 +13,13 @@ import java.awt.*;
  * @create: 2021-01-06 19:36
  **/
 public class VideoOwner {
-    private final long mid;
-    private final String name;
-    private final String face_url;
+    private long mid;
+    private String name;
+
+    @SerializedName("face")
+    private String face_url;
 
     public VideoOwner(JsonObject owner) {
-        this.mid = owner.get("mid").getAsLong();
-        this.name = owner.get("name").getAsString();
-        this.face_url = owner.get("face").getAsString();
     }
 
     /**

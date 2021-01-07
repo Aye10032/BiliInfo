@@ -5,10 +5,12 @@ import com.aye10032.biliutil.util.Util;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.SerializedName;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @program: biliutil
@@ -23,7 +25,10 @@ public class VideoData {
     private int tid;
     private String tname;
     private int copyright;
+
+    @SerializedName("pic")
     private String pic_url;
+
     private String title;
     private long pubdate;
     private long ctime;
@@ -31,40 +36,32 @@ public class VideoData {
     private int state;
     private int duration;
     private int mission_id;
+
+    @SerializedName("rights")
     private VideoRights videoRights;
+
+    @SerializedName("owner")
     private VideoOwner videoOwner;
+
+    @SerializedName("stat")
     private VideoStat videoStat;
+
     private String dynamic;
     private long cid;
+
+    @SerializedName("dimension")
     private VideoDimension videoDimension;
+
     private boolean no_cache;
-    private VideoPages videoPages;
+
+    @SerializedName("pages")
+    private List<VideoPage> videoPages;
+
+    @SerializedName("subtitle")
     private VideoSubtitle videoSubtitle;
 
     public VideoData(JsonObject body_json) {
-//        this.bvid = body_json.get("bvid").getAsString();
-//        this.aid = body_json.get("aid").getAsLong();
-//        this.videos = body_json.get("videos").getAsInt();
-//        this.tid = body_json.get("tid").getAsInt();
-//        this.tname = body_json.get("tname").getAsString();
-//        this.copyright = body_json.get("copyright").getAsInt();
-//        this.pic_url = body_json.get("pic").getAsString();
-//        this.title = body_json.get("title").getAsString();
-//        this.pubdate = body_json.get("pubdate").getAsLong();
-//        this.ctime = body_json.get("ctime").getAsLong();
-//        this.desc = body_json.get("desc").getAsString();
-//        this.state = body_json.get("state").getAsInt();
-//        this.duration = body_json.get("duration").getAsInt();
-//        this.mission_id = body_json.get("mission_id").getAsInt();
-//        this.videoRights = new VideoRights(body_json.getAsJsonObject("rights"));
-//        this.videoOwner = new VideoOwner(body_json.getAsJsonObject("owner"));
-//        this.videoStat = new VideoStat(body_json.getAsJsonObject("stat"));
-//        this.dynamic = body_json.get("dynamic").getAsString();
-//        this.cid = body_json.get("cid").getAsLong();
-//        this.videoDimension = new VideoDimension(body_json.get("dimension").getAsJsonObject());
-//        this.no_cache = body_json.get("no_cache").getAsBoolean();
-//        this.videoPages = new VideoPages(body_json.getAsJsonArray("pages"));
-//        this.videoSubtitle = new VideoSubtitle(body_json.getAsJsonObject("subtitle"));
+
     }
 
     /**
@@ -120,8 +117,7 @@ public class VideoData {
      * @return 封面image对象
      */
     public Image getPic() {
-        Image image = ImgUtils.getImage(getPic_url());
-        return image;
+        return ImgUtils.getImage(getPic_url());
     }
 
     /**
@@ -258,7 +254,7 @@ public class VideoData {
     /**
      * @return 视频分P信息
      */
-    public VideoPages getVideoPages() {
+    public List<VideoPage> getVideoPages() {
         return videoPages;
     }
 }

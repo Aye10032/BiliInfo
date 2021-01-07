@@ -9,34 +9,22 @@ import com.google.gson.JsonObject;
  * @create: 2021-01-07 12:20
  **/
 public class VideoStat {
-    private final long aid;
-    private final int view;
-    private final int danmaku;
-    private final int reply;
-    private final int favorite;
-    private final int coin;
-    private final int share;
-    private final int now_rank;
-    private final int his_rank;
-    private final int like;
-    private final int dislike;
-    private final String evaluation;
-    private final String argue_msg;
+    private long aid;
+    private int view;
+    private int danmaku;
+    private int reply;
+    private int favorite;
+    private int coin;
+    private int share;
+    private int now_rank;
+    private int his_rank;
+    private int like;
+    private int dislike;
+    private String evaluation;
+    private String argue_msg;
 
     public VideoStat(JsonObject stat) {
-        this.aid = stat.get("aid").getAsLong();
-        this.view = stat.get("view").getAsInt();
-        this.danmaku = stat.get("danmaku").getAsInt();
-        this.reply = stat.get("reply").getAsInt();
-        this.favorite = stat.get("favorite").getAsInt();
-        this.coin = stat.get("coin").getAsInt();
-        this.share = stat.get("share").getAsInt();
-        this.now_rank = stat.get("now_rank").getAsInt();
-        this.his_rank = stat.get("his_rank").getAsInt();
-        this.like = stat.get("like").getAsInt();
-        this.dislike = stat.get("dislike").getAsInt();
-        this.evaluation = stat.get("evaluation").getAsString();
-        this.argue_msg = stat.get("argue_msg").getAsString();
+
     }
 
     /**

@@ -13,14 +13,11 @@ import java.util.List;
  * @create: 2021-01-07 15:21
  **/
 public class VideoSubtitle {
-    private final boolean allow_submit;
-    private final List<SubtitleData> list = new ArrayList<>();
+    private boolean allow_submit;
+    private List<SubtitleData> list;
 
     public VideoSubtitle(JsonObject subtitle) {
-        this.allow_submit = subtitle.get("allow_submit").getAsBoolean();
-        for (JsonElement element:subtitle.getAsJsonArray("list")){
-            list.add(new SubtitleData(element.getAsJsonObject()));
-        }
+
     }
 
     /**
@@ -40,7 +37,7 @@ public class VideoSubtitle {
     /**
      * @return 外挂字幕数量
      */
-    public int getSubtitlesNum(){
+    public int getSubtitlesNum() {
         return getList().size();
     }
 }
