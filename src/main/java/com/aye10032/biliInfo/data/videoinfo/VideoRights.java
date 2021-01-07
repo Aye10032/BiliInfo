@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.data.videoinfo;
+package com.aye10032.biliInfo.data.videoinfo;
 
 import com.google.gson.JsonObject;
 

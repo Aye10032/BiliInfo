@@ -1,5 +1,4 @@
-import com.aye10032.biliutil.UserInfo;
-import com.aye10032.biliutil.VideoInfo;
+import com.aye10032.biliInfo.VideoInfo;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;

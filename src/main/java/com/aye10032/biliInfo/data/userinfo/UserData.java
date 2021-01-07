@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.data.userinfo;
+package com.aye10032.biliInfo.data.userinfo;
 
 /**
  * @program: biliutil

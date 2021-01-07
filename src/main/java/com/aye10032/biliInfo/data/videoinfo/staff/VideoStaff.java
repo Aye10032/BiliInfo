@@ -1,6 +1,6 @@
-package com.aye10032.biliutil.data.videoinfo.staff;
+package com.aye10032.biliInfo.data.videoinfo.staff;
 
-import com.aye10032.biliutil.util.ImgUtils;
+import com.aye10032.biliInfo.util.ImgUtils;
 import com.google.gson.annotations.SerializedName;
 
 import java.awt.*;

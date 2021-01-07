@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.data;
+package com.aye10032.biliInfo.data;
 
 public class URL {
 

@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.data.videoinfo.subtitle;
+package com.aye10032.biliInfo.data.videoinfo.subtitle;
 
 import com.google.gson.JsonObject;
 

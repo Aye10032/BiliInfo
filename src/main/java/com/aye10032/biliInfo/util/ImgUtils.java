@@ -1,12 +1,7 @@
-package com.aye10032.biliutil.util;
+package com.aye10032.biliInfo.util;
 
-import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
-import javax.imageio.ImageWriteParam;
-import javax.imageio.ImageWriter;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.ColorModel;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;

@@ -1,6 +1,6 @@
-package com.aye10032.biliutil;
+package com.aye10032.biliInfo;
 
-import com.aye10032.biliutil.data.URL;
+import com.aye10032.biliInfo.data.URL;
 import com.google.gson.JsonObject;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

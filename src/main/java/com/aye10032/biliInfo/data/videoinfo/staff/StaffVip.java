@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.data.videoinfo.staff;
+package com.aye10032.biliInfo.data.videoinfo.staff;
 
 /**
  * @program: biliInfo

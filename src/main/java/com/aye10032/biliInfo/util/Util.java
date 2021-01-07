@@ -1,4 +1,4 @@
-package com.aye10032.biliutil.util;
+package com.aye10032.biliInfo.util;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;

@@ -1,8 +1,8 @@
-package com.aye10032.biliutil.data.videoinfo;
+package com.aye10032.biliInfo.data.videoinfo;
 
-import com.aye10032.biliutil.data.videoinfo.staff.VideoStaff;
-import com.aye10032.biliutil.util.ImgUtils;
-import com.aye10032.biliutil.util.Util;
+import com.aye10032.biliInfo.data.videoinfo.staff.VideoStaff;
+import com.aye10032.biliInfo.util.ImgUtils;
+import com.aye10032.biliInfo.util.Util;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 

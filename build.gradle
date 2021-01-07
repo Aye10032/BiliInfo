@@ -27,7 +27,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/aye10032/biliutil")
+            url = uri("https://maven.pkg.github.com/Aye10032/BiliInfo")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("GIT_USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("GIT_TOKEN")
