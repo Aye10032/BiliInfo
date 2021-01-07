@@ -8,7 +8,7 @@ import com.google.gson.JsonObject;
  * @author: Aye10032
  * @create: 2021-01-07 14:28
  **/
-public class VideoPage {
+public class PageData {
     private final long cid;
     private final int page;
     private final String from;
@@ -18,7 +18,7 @@ public class VideoPage {
     private final String weblink;
     private final VideoDimension dimension;
 
-    public VideoPage(JsonObject page) {
+    public PageData(JsonObject page) {
         this.cid = page.get("cid").getAsLong();
         this.page = page.get("page").getAsInt();
         this.from = page.get("from").getAsString();

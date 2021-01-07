@@ -13,12 +13,12 @@ import java.util.ArrayList;
  **/
 public class VideoPages{
 
-    private final ArrayList<VideoPage> videoPages = new ArrayList<>();
+    private final ArrayList<PageData> videoPages = new ArrayList<>();
 
     public VideoPages(JsonArray videoPages){
         for (JsonElement element : videoPages) {
             try {
-                this.videoPages.add(new VideoPage(element.getAsJsonObject()));
+                this.videoPages.add(new PageData(element.getAsJsonObject()));
             }catch (IllegalStateException e){
                 e.printStackTrace();
             }
@@ -26,7 +26,7 @@ public class VideoPages{
         }
     }
 
-    public ArrayList<VideoPage> getPageList() {
+    public ArrayList<PageData> getPageList() {
         return videoPages;
     }
 
