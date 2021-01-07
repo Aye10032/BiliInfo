@@ -1,6 +1,5 @@
-package com.aye10032.biliutil.data.videoinfo;
+package com.aye10032.biliutil.data.videoinfo.subtitle;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import java.util.List;
