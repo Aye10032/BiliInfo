@@ -1,5 +1,6 @@
 package com.aye10032.biliInfo.data.userinfo;
 
+import com.aye10032.biliInfo.data.userinfo.vip.UserVip;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -27,5 +28,10 @@ public class UserData {
     private boolean fans_badge;
 
     @SerializedName("official")
-    private UserOfficial userOfficial;
+    private UserOfficial user_official;
+
+    @SerializedName("vip")
+    private UserVip user_vip;
+
+
 }
