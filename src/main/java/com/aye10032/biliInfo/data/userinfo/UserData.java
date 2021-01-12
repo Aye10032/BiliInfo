@@ -33,5 +33,15 @@ public class UserData {
     @SerializedName("vip")
     private UserVip user_vip;
 
+    @SerializedName("pendant")
+    private UserPendant user_pendant;
 
+    @SerializedName("nameplate")
+    private UserNameplate user_nameplate;
+
+    private boolean is_followed;
+    private String top_photo;
+
+    @SerializedName("theme")
+    private UserTheme user_theme;
 }
