@@ -44,4 +44,101 @@ public class UserData {
 
     @SerializedName("theme")
     private UserTheme user_theme;
+
+    private SysNotice sys_notice;
+
+    @SerializedName("live_room")
+    private UserLiveroom user_liveroom;
+
+    public UserData(){
+
+    }
+
+    public long getMid() {
+        return mid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getFace() {
+        return face;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public int getJoin_time() {
+        return join_time;
+    }
+
+    public int getMoral() {
+        return moral;
+    }
+
+    public int getSilence() {
+        return silence;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public boolean isFans_badge() {
+        return fans_badge;
+    }
+
+    public UserOfficial getUser_official() {
+        return user_official;
+    }
+
+    public UserVip getUser_vip() {
+        return user_vip;
+    }
+
+    public UserPendant getUser_pendant() {
+        return user_pendant;
+    }
+
+    public UserNameplate getUser_nameplate() {
+        return user_nameplate;
+    }
+
+    public boolean isIs_followed() {
+        return is_followed;
+    }
+
+    public String getTop_photo() {
+        return top_photo;
+    }
+
+    public UserTheme getUser_theme() {
+        return user_theme;
+    }
+
+    public SysNotice getSys_notice() {
+        return sys_notice;
+    }
+
+    public UserLiveroom getUser_liveroom() {
+        return user_liveroom;
+    }
 }
