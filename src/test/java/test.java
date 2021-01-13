@@ -9,7 +9,7 @@ public class test {
     @Test
     public void test() {
         UserInfo userInfo = new UserInfo(40077740L);
-        System.out.println(userInfo.getUserData().getBirthday());
+        System.out.println(userInfo.getUserData().getUser_liveroom().getTitle());
 //        VideoInfo videoInfo = new VideoInfo("BV1fa4y1H7Gz");
 //
 //        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
