@@ -25,7 +25,6 @@ public class LiveInfo {
 
     private int code;
     private String message;
-    private int ttl;
     private LiveData liveData;
 
     public LiveInfo(long id, int type) {
@@ -63,7 +62,6 @@ public class LiveInfo {
                 this.body_json = element.getAsJsonObject();
                 this.code = body_json.get("code").getAsInt();
                 this.message = body_json.get("message").getAsString();
-                this.ttl = body_json.get("ttl").getAsInt();
 
                 this.liveData = gson.fromJson(body_json.getAsJsonObject("data"), LiveData.class);
             }
@@ -91,10 +89,6 @@ public class LiveInfo {
 
     public String getMessage() {
         return message;
-    }
-
-    public int getTtl() {
-        return ttl;
     }
 
     /**
